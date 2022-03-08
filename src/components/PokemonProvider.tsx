@@ -11,16 +11,16 @@ export const PokemonProvider:FunctionComponent = (props) => {
     const [completePokemonData, setCompletePokemonData] = useState<IPokemonCompleteData>();
     const navigate = useNavigate()
 
-    useEffect(() => {
-        fetchDefaultPokemonDataForId('1')
-    }, [])
-    
     const fetchDefaultPokemonDataForId = async (id: string) => {
         const defaultPokemonData = await fetchPokemonData(id);
         setCompletePokemonData(defaultPokemonData);
         navigate(`/${defaultPokemonData?.originalPokemon?.name}/${defaultPokemonData?.originalPokemon?.id}`)
     }
-
+    
+    useEffect(() => {
+            fetchDefaultPokemonDataForId('1')
+    }, [fetchDefaultPokemonDataForId])
+    
     return (
         <PokemonContext.Provider value={[completePokemonData, setCompletePokemonData]}>
             {props.children}
