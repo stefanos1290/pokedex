@@ -14,7 +14,7 @@ const App: FunctionComponent = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <PokemonProvider>
-        <div className="container" title='pokemons'>
+        <div className="container" aria-label='pokemons'>
           <Header />
           <Pokemons />
           <SelectedPokemonCard />
