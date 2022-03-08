@@ -1,6 +1,6 @@
 .container {
-    background-image: url("../../public/bg.png");
-    background-size: auto;
+    background-image: linear-gradient(62deg, #fcf5ec 0%, #bddef6 100%);
+    /* background-size: auto; */
     height: 100vh;
     display: flex;
     align-items: center;
