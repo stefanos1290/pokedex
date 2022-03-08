@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+.allPokemonsLoaderContainer {
+    width: 500px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.allPokemonsContainer {
+    width: 500px;
+    height: 70vh;
+    overflow: scroll;
+    align-items: center;
+    border-radius: 4px;
+}
+.buttonContainer {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+.prevPage {
+    width: 250px;
+}
+.nextPage {
+    width: 250px;
+}
