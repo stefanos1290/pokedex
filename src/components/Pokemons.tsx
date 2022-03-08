@@ -2,7 +2,6 @@ import React, { FunctionComponent, useState, useContext } from "react";
 import { useQuery } from "react-query";
 
 import Button from "@material-ui/core/Button";
-import { Card } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { PokemonContext } from "./PokemonProvider";
 

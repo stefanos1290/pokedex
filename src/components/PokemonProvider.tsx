@@ -1,7 +1,7 @@
 import React, {FunctionComponent, useState, useEffect, createContext} from 'react';
 
 import { fetchPokemonData } from '../utils/utils';
-import {IPokemonData, IPokemonCompleteData} from '../types/types';
+import { IPokemonCompleteData} from '../types/types';
 
 import { useNavigate } from "react-router-dom";
 
