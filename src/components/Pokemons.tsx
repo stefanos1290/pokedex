@@ -12,6 +12,7 @@ import "../styles/Pokemons.css";
 
 const Pokemons: FunctionComponent = () => {
   const [offset, setOffset] = useState<number>(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [completePokemonData, setCompletePokemonData] =
     useContext<any>(PokemonContext);
 
