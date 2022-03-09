@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useState, useEffect, createContext, useCallback} from 'react';
+import React, {FunctionComponent, useState, useEffect, createContext, useCallback, useMemo} from 'react';
 
 import { fetchPokemonData } from '../utils/utils';
 import { IPokemonCompleteData} from '../types/types';
@@ -15,11 +15,13 @@ export const PokemonProvider:FunctionComponent = (props) => {
         const defaultPokemonData = await fetchPokemonData(id);
         setCompletePokemonData(defaultPokemonData);
         navigate(`/${defaultPokemonData?.originalPokemon?.name}/${defaultPokemonData?.originalPokemon?.id}`)
-    }, [])
+        console.log(defaultPokemonData)
+    },[])
     
     useEffect(() => {
         fetchDefaultPokemonDataForId('1');
-    }, [fetchDefaultPokemonDataForId])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <PokemonContext.Provider value={[completePokemonData, setCompletePokemonData]}>
