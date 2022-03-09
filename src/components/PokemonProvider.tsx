@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useState, useEffect, createContext, useCallback} from 'react';
+import React, {FunctionComponent, useState, useEffect, createContext} from 'react';
 
 import { fetchPokemonData } from '../utils/utils';
 import { IPokemonCompleteData} from '../types/types';
