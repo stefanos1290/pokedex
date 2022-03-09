@@ -209,7 +209,10 @@ const SelectedPokemonCard: FunctionComponent = () => {
                                   onClick={() => onClickHandler(evolPokemon.id)}
                                   key={`evolusion_pokemon_${evolPokemon.id}`}
                                 >
-                                  <img alt={evolPokemon.id} src={evolPokemon.sprite} />
+                                  <img
+                                    alt={evolPokemon.id}
+                                    src={evolPokemon.sprite}
+                                  />
                                   <Typography
                                     component="div"
                                     variant="subtitle1"
