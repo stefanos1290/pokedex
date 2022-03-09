@@ -82,6 +82,7 @@ const SelectedPokemonCard: FunctionComponent = () => {
                     <img
                       className="selected_pokemon_image"
                       src={completePokemonData.originalPokemon.sprite}
+                      alt={completePokemonData.originalPokemon.id}
                     />
                   </div>
                   <div data-test="flex2Container" className="flex2Container">
@@ -208,7 +209,7 @@ const SelectedPokemonCard: FunctionComponent = () => {
                                   onClick={() => onClickHandler(evolPokemon.id)}
                                   key={`evolusion_pokemon_${evolPokemon.id}`}
                                 >
-                                  <img src={evolPokemon.sprite} />
+                                  <img alt={evolPokemon.id} src={evolPokemon.sprite} />
                                   <Typography
                                     component="div"
                                     variant="subtitle1"
