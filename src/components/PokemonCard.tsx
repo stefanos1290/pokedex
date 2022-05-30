@@ -5,7 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   pokeball: {
     width: 30,
   },
+  selected: {
+    backgroundColor: "#8EC5FC"
+  }
 }));
 
 interface PokemonProps {
@@ -31,6 +34,9 @@ interface PokemonProps {
 
 const PokemonCard = (PokemonProps: PokemonProps) => {
   const classes = useStyles();
+  const location = useLocation();
+  const extractedFromLocationId = location.pathname.split('/')[2];
+
   return (
     <List className={classes.root}>
       <Link
@@ -39,6 +45,7 @@ const PokemonCard = (PokemonProps: PokemonProps) => {
       >
         <ListItem
           button
+          className={PokemonProps.id[0] === extractedFromLocationId ? classes.selected : ""}
           onClick={PokemonProps.onClick}
           onMouseEnter={PokemonProps.onMouseEnter}
         >
